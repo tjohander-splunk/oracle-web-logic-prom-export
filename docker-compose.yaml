@@ -1,9 +1,7 @@
 version: "3.9"
 services:
   admin:
-#    image: domain-home-in-image:12.2.1.3
-#    image: store/oracle/weblogic:12.2.1.3
-    image: domain-home-in-image:14.1.1.0
+    image: tjohander/domain-home-in-image:14.1.1.0
     hostname: wlsadmin
     container_name: wsladmin
     ports:
@@ -13,7 +11,7 @@ services:
       - ./weblogic/admin:/u01/oracle/properties
       - ./weblogic/admin/apps:/app
   ms1:
-    image: domain-home-in-image:14.1.1.0
+    image: tjohander/domain-home-in-image:14.1.1.0
     ports:
       - "8001:8001"
     volumes:
@@ -23,7 +21,7 @@ services:
     command:
       - startManagedServer.sh
   ms2:
-    image: domain-home-in-image:14.1.1.0
+    image: tjohander/domain-home-in-image:14.1.1.0
     ports:
       - "8002:8001"
     volumes:
