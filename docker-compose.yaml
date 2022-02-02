@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   admin:
-    image: tjohander/domain-home-in-image:14.1.1.0
+    image: docker.io/tjohander/domain-home-in-image:14.1.1.0
     hostname: wlsadmin
     container_name: wsladmin
     ports:
