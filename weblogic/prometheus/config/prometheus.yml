@@ -15,9 +15,6 @@ scrape_configs:
       username: myuser
       password: mypassword1
   - job_name: spring-pet-clinic
-      static_configs:
-          - targets: [ 'admin:7001', 'ms1:8001', 'ms2:8001' ]
-      metrics_path: '/petclinic/actuator/prometheus'
-      basic_auth:
-        username: myuser
-        password: mypassword1
+    static_configs:
+      - targets: [ 'admin:7001', 'ms1:8001', 'ms2:8001' ]
+    metrics_path: '/petclinic/actuator/prometheus'

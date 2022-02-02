@@ -11,7 +11,7 @@ services:
       - ./weblogic/admin:/u01/oracle/properties
       - ./weblogic/admin/apps:/app
   ms1:
-    image: tjohander/domain-home-in-image:14.1.1.0
+    image: docker.io/tjohander/domain-home-in-image:14.1.1.0
     ports:
       - "8001:8001"
     volumes:
@@ -21,7 +21,7 @@ services:
     command:
       - startManagedServer.sh
   ms2:
-    image: tjohander/domain-home-in-image:14.1.1.0
+    image: docker.io/tjohander/domain-home-in-image:14.1.1.0
     ports:
       - "8002:8001"
     volumes:
@@ -31,9 +31,9 @@ services:
     command:
       - startManagedServer.sh
   prometheus:
-    build:
-      context: ./weblogic/prometheus
-      dockerfile: Dockerfile
+    image: prom/prometheus
+    volumes:
+      - ./weblogic/prometheus/config:/etc/prometheus
     ports:
       - "9090:9090"
   otel:

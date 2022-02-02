@@ -18,9 +18,9 @@ queries:
           prefix: weblogic_servlet_
           key: servletName
           values: [invocationTotalCount, reloadTotal, executionTimeAverage, poolMaxCapacity, executionTimeTotal, reloadTotalCount, executionTimeHigh, executionTimeLow]
+  - key: name
+    keyName: server
     JVMRuntime:
       prefix: jvm_
       key: name
-      values: [ heapFreeCurrent, heapFreePercent, heapSizeCurrent ]
-
-
+      values: [ heapFreeCurrent, heapFreePercent, heapSizeCurrent, heapSizeMax, processCpuLoad, uptime ]

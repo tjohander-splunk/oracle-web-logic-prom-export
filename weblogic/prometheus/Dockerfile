@@ -1,2 +1,2 @@
 FROM prom/prometheus
-COPY basic-config.yaml /etc/prometheus/prometheus.yml
+COPY prometheus.yml /etc/prometheus/prometheus.yml
