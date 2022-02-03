@@ -20,4 +20,18 @@ cp wls-exporter.war ../admin/apps
 docker compose up -d
 ```
 4. Install The Apps
-Screenshots of this process coming soon.  If you need to know how right now, reach out to tjohander@splunk.com or review the Web Logic documentation for "Deployments".
+Screenshots of this process coming soon.
+
+3. To Deploy the WAR File to the Production Server
+Open the WebLogic Server console for the target server running in production mode at `http://localhost:7001/console`. Use the credentials conatined in the `./weblogic/admin/security.properties` file.
+
+* On the left-hand side Change Center pane, click Lock & Edit.
+* On the left-hand side Domain Structure pane, click Deployments.
+* On the right-hand content pane, click Install.
+* Browse to the directory where the WAR (`localhost/app`) file resides, mark the radio button next to the WAR file you want to deploy, and click Next.
+* Confirm that the radio button next to Install this deployment as an application is marked and click Next.
+* Click Finish.
+* On the left-hand side Change Center pane, click Activate Changes.
+* On the right-hand content pane, mark the radio button next to the EAR just deployed.
+* Click Start to view the dropdown list and select Servicing all requests.
+* In the content pane of the new page, click Yes.
