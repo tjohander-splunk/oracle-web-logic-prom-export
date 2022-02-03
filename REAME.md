@@ -20,7 +20,7 @@ cp wls-exporter.war ../admin/apps
 docker compose up -d
 ```
 4. Install The Apps
-Screenshots of this process coming soon.
+Screenshots of this process coming soon....
 
 3. To Deploy the WAR File to the Production Server
 Open the WebLogic Server console for the target server running in production mode at `http://localhost:7001/console`. Use the credentials conatined in the `./weblogic/admin/security.properties` file.
@@ -35,3 +35,7 @@ Open the WebLogic Server console for the target server running in production mod
 * On the right-hand content pane, mark the radio button next to the EAR just deployed.
 * Click Start to view the dropdown list and select Servicing all requests.
 * In the content pane of the new page, click Yes.
+
+This should be all you need to get the infrastucture up and running
+
+## Demo the Solution
